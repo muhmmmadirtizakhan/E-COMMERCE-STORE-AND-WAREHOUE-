@@ -70,3 +70,48 @@
 </p>
 
 ------
+
+## 🔄 Data Flow
+
+----
+
+> 🗺️ **7 critical flows** — every user action mapped end-to-end across client, server, and services.
+
+🔐 **Auth** — Firebase handles sign-in client-side and returns a JWT, which is stored and attached to every subsequent API request as a Bearer token.
+
+🛒 **Cart** — Every add-to-cart hits Express first, JWT is verified, then Supabase stores the item — nothing is trusted from the client alone.
+
+📦 **Order Placement** — The most complex flow: address saved → payment intent created → Stripe.js confirms card → order written to DB → cart cleared → confirmation email fired → PDF receipt generated, all in sequence.
+
+❤️ **Favourites** — Logged-in users sync directly to Supabase; guests get localStorage with an auto-sync triggered on next login.
+
+📊 **Dashboard** — Order history pulled from Supabase and processed entirely on the frontend to calculate total spent, order count, average value, and chart data.
+
+🔔 **Stripe Webhook** — Stripe calls back into the server independently to confirm payment server-side, updating order status from `pending → confirmed` without trusting the client.
+
+⚡ **Formspree** — The only flow that bypasses Express entirely — contact forms POST directly to Formspree from the browser, keeping the server lean.
+
+-----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/muhmmmadirtizakhan/E-COMMERCE-STORE-AND-WAREHOUE-/main/docs/dataflow.svg" width="100%"/>
+</p>
+
+-----
+
+## 👨‍💻 Author 🧑‍🚀
+**Muhammad Irtiza Khan**  
+
+- 🐙 GitHub: https://github.com/muhmmmadirtizakhan  
+- 📧 Email: irtizakhan844@gmail.com  
+
+---
+
+## ⭐ Support 💖
+If you like this project, give it a ⭐ on GitHub!
+
+---
+
+## 🌍 Live Demo 🌐
+👉 
+
+---
