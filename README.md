@@ -51,10 +51,3 @@
 <p align="center">
   <img src="./docs/architecture.svg" alt="AETHERIC System Architecture" width="100%"/>
 </p>
-
-
-<svg width="100%" viewBox="0 0 680 520" ...>
-  ...
-</svg>
-
-</p>
