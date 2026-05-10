@@ -45,9 +45,28 @@
   <img src="https://img.shields.io/badge/Resend-Email-c4a47c?style=for-the-badge&logo=maildotru&logoColor=c4a47c&labelColor=0f0f1e" />
   <img src="https://img.shields.io/badge/Formspree-Forms-E34F26?style=for-the-badge&logo=html5&logoColor=E34F26&labelColor=0f0f1e" />
 </p>
+
 -----
 ## 🏗️ Architecture
+
+---
+
+> 🧠 **3-Tier Design** — Client · Server · Services — every layer has one job.
+
+🖥️ **Client** (HTML/CSS/JS) never touches any database or payment provider directly — every sensitive operation routes through the Express server first.
+
+🛡️ **Express** acts as the central gatekeeper — every incoming request hits a Firebase Auth middleware that verifies the JWT token before any route logic executes.
+
+🔀 **Once authenticated**, the server fans out to the right service — Supabase for database reads/writes, Stripe for payment intents and refunds, and Resend for branded order confirmation emails.
+
+🔔 **Stripe webhooks** call back into the server to confirm payment server-side — order status is never trusted from the client alone.
+
+⚡ **Formspree** is the only bypass — contact forms POST directly from the browser since no sensitive data is involved and no server overhead is needed.
+
+------
 
 <p align="center">
   <img src="./docs/architecture.svg" alt="AETHERIC System Architecture" width="100%"/>
 </p>
+
+------
