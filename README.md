@@ -44,6 +44,7 @@
   <img src="https://img.shields.io/badge/Stripe-Payments-635BFF?style=for-the-badge&logo=stripe&logoColor=635BFF&labelColor=0f0f1e" />
   <img src="https://img.shields.io/badge/Resend-Email-c4a47c?style=for-the-badge&logo=maildotru&logoColor=c4a47c&labelColor=0f0f1e" />
   <img src="https://img.shields.io/badge/Formspree-Forms-E34F26?style=for-the-badge&logo=html5&logoColor=E34F26&labelColor=0f0f1e" />
+  <img src="https://img.shields.io/badge/Cloudinary-Media%20CDN-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white&labelColor=0f0f1e" />
 </p>
 
 -----
@@ -112,6 +113,7 @@ If you like this project, give it a ⭐ on GitHub!
 ---
 
 ## 🌍 Live Demo 🌐
-👉 
+
+👉 https://aetheric-neon.vercel.app/
 
 ---
